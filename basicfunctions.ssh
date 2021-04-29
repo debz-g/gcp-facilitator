@@ -1,0 +1,66 @@
+1. Creating a new directory
+  
+   mkdir new_directory
+   
+2. Moving to new directory
+
+   cd new_directory
+   
+3. Creating and opening a file in the directory
+
+   nano index.js
+   nano base.txt
+   
+4. At this point, the index.js or base.txt file is open, we can write anything into these files and save them.
+
+   To save them we have to exit nano(CTRL + X) and to save the file we have to press Y
+   
+----------------------------------------------------------------------------------------------------------------------------
+
+gsutil command is used for bucket and object management.
+
+We can use gsutil for the following functions
+
+- Creating and deleting buckets. 
+- Uploading, downloading, and deleting objects.
+- Listing buckets and objects.
+- Moving, copying, and renaming objects.
+- Editing object and bucket ACLs.
+
+Some gsutil commnads
+
+- cp : copy files and objects
+- mb : make buckets
+- config : obtain credentials and create configuration file
+- iam : get, set, or change bucket and/or object IAM permissions.
+- label : get, set, or change the label configuration of a bucket.
+- ls : list poviders, buckets and objects
+- mv: move or rename objects
+- perfdiag : run performance diagnostics
+- rb : remove buckets
+- rm : remove objects
+- rsync : sync to buckets or directories
+- setmeta : set metadata on already uploaded objects
+- stat : display object status
+- ubla : configure uniform bucket level access
+- update : update to latest gsutil release
+- web : set main/error page for one or more buckets
+
+----------------------------------------------------------------------------------------------------------------------
+
+1. Deploying a fuction
+
+   When deploying a new function, you must specify --trigger-topic, --trigger-bucket, or --trigger-http.
+   
+   gcloud functions deploy helloWorld \
+  --stage-bucket [BUCKET_NAME] \
+  --trigger-topic hello_world \
+  --runtime nodejs8
+  
+2. Verify the status of the function
+
+   gcloud functions describe helloWorld
+   
+3. View logs
+
+   gcloud functions logs read helloWorld
