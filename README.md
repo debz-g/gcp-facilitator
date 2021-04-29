@@ -8,3 +8,6 @@ This repo contains the basic shell commands of:
 4. How to configure ports and set name to the ports
 5. How to create a firewall with rule and a basicHTTP health check
 6. How to configure load balancers
+
+and loads of other cloud commands
+
